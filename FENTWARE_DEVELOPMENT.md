@@ -1,34 +1,38 @@
-# FentWare Glass — Playnite Desktop
+# FentWare Glass — development notes
 
-Working theme based on Daze 2.3.1. Keep Daze attribution and LICENSE intact.
+This Playnite Desktop XAML theme is based on Daze 2.3.1. Preserve the upstream MIT license and attribution.
 
-## v0.1 foundation
+## Design direction
 
-- Unique FentWare Glass theme ID/name/version in `theme.yaml`.
-- Cool charcoal background, desaturated slate glass surfaces and soft silver foreground in `Constants.xaml`.
-- Rounded panels, thinner control outlines, Segoe UI fallback so a separate Lato install is not needed.
-- No external images or extensions required for this initial palette pass. Current inherited Daze images remain placeholders.
+Align with the **FentWare Site** CSS design tokens, not a blue-tinted glass palette:
+- background `#020205`
+- glass: white at 5.5% opacity
+- strong glass: white at 10.5%
+- outlines: white at 16%
+- primary text: white at 92%
+- muted text: white at 56%
 
-## Local test
+Current theme tokens are in `Constants.xaml`. The styling is still under development.
 
-1. Check out `feature/fentware-glass-foundation`.
-2. Copy the folder `Daze_27790ca9-d3a4-480f-bffe-914ec6768363_2_3_1` into `%APPDATA%\\Playnite\\Themes\\Desktop\\` (rename the folder to `FentWare-Glass` if desired).
-3. Select **FentWare Glass** under Playnite's desktop theme settings, then restart Playnite.
-4. Test grid, details, list, context menus, sidebar and modal dialogs at 1080p and higher resolutions.
-5. Use Playnite Toolbox to package as .pthm only when distributing.
+## Testing from the clone
 
-## Later assets from FentWare Site / Desktop
+1. Pull `main`.
+2. Point your Playnite Desktop theme directory at the extracted theme folder (currently `Daze_27790ca9-d3a4-480f-bffe-914ec6768363_2_3_1`) using a Windows junction, or copy the theme folder.
+3. Enable **FentWare Glass** in Playnite Desktop settings and restart it after XAML changes.
+4. Test grid, list, details, filters, context menus, and dialogs at 1080p and 1440p.
+5. Package to `.pthm` with Playnite Toolbox for distribution through fentware.cc.
 
-- **Brand mark**: transparent PNG (512 x 512 or larger), plus SVG source if available, to replace `Images/applogo.png`.
-- **Background / wallpaper**: 1920x1080 or 2560x1440 image used across FentWare apps; confirm usage rights.
-- **Brand tokens**: exact hex colors for surface, text, outlines and accent; desired font names.
-- **Optional app icons**: transparent monochrome SVG/PNG for custom navigation if a redesign needs them.
+## Planned assets
 
-## Next implementation work
+- Transparent FentWare logo (512px or larger); replace `Images/applogo.png` and consider existing sidebar references.
+- FentWare wallpaper or fallback background in 1080p/1440p.
+- Optional navigation icons and typography assets, with suitable redistribution rights.
 
-- Tune sidebar/top panel styling using `Views/Sidebar.xaml`, `Views/TopPanel.xaml` and control styles.
-- Refine selected/hover game tiles via `DerivedStyles/GridViewItemTemplate.xaml` and `GridViewItemStyle.xaml`.
-- Harmonize game-details panel and play button.
-- Replace placeholder Daze artwork once FentWare assets are provided.
+## Next styling work
 
-This is a **code-only first pass**, not runtime-tested in Playnite yet. Avoid changing core Playnite template parts without checking their behavior.
+- Sidebar and top panel in `Views/Sidebar.xaml` and `Views/TopPanel.xaml`
+- Grid hover and selection in `DerivedStyles/GridViewItemTemplate.xaml`
+- Game details in `Views/GridViewGameOverview.xaml` and `Views/DetailsViewGameOverview.xaml`
+- Play button and dialogs in shared XAML style files
+
+Preserve working Playnite template part names and bindings. The application-level theme has not yet been tested in this environment.
