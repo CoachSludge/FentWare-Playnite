@@ -15,15 +15,9 @@
                                     Width="44" Height="44" Margin="0,0,0,5"
                                     DockPanel.Dock="Top" Padding="5" Cursor="Arrow"
                                     WindowChrome.IsHitTestVisibleInChrome="True">
-                                <!-- FentWare monogram fallback; replace with a transparent brand PNG when available. -->
-                                <Border Background="{DynamicResource FentGlassStrong}"
-                                        BorderBrush="{DynamicResource FentGlassLine}"
-                                        BorderThickness="1" CornerRadius="12">
-                                    <TextBlock Text="FW" FontFamily="Segoe UI" FontWeight="SemiBold"
-                                               FontSize="14"
-                                               Foreground="{DynamicResource White}"
-                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
+                                <!-- FentWare logo supplied in Images/fentware. -->
+                                <Image Source="{ThemeFile 'Images/fentware/logo_tranparent_rounded_edge_250.jpg'}"
+                                       Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" />
                             </Border>
 
                             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden"
