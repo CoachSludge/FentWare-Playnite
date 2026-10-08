@@ -4,22 +4,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type LibraryDetailsView}">
-                    <DockPanel d:DesignWidth="1280" d:DesignHeight="960" Margin="10,8,12,20" d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
-                        <!-- Steam-like left library rail. Uses Playnite's real game list and selection binding. -->
-                        <Border DockPanel.Dock="Left" Width="314" Margin="0,0,12,0"
-                                Padding="8,12,8,8" CornerRadius="14"
-                                Background="{DynamicResource FentGlass}"
-                                BorderBrush="{DynamicResource FentGlassLine}" BorderThickness="1">
-                          <Grid>
-                            <Grid.RowDefinitions>
-                              <RowDefinition Height="Auto"/>
-                              <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Text="YOUR GAMES" Margin="12,0,0,12"
-                                       FontSize="11" FontWeight="SemiBold"
-                                       Foreground="{DynamicResource FentTextMuted}"/>
-                            <Grid Grid.Row="1">
-                            <ExtendedListBox x:Name="PART_ListGames" Margin="4,0,4,0" BorderBrush="{DynamicResource AlphaWhite}" ItemContainerStyle="{DynamicResource DetailsViewItemStyle}" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.PanningMode="VerticalOnly">
+                    <DockPanel d:DesignWidth="1280" d:DesignHeight="960" Margin="10,52,0,80" d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
+                        <Grid DockPanel.Dock="{Settings DetailsListPosition}" Width="{Settings DetailsListWitdh}">
+                            <ExtendedListBox x:Name="PART_ListGames" Margin="10,-6,10,0" BorderBrush="{DynamicResource AlphaWhite}" ItemContainerStyle="{DynamicResource DetailsViewItemStyle}" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.PanningMode="VerticalOnly">
                                 <ExtendedListBox.Style>
                                     <Style TargetType="ExtendedListBox" BasedOn="{StaticResource {x:Type ExtendedListBox}}">
                                         <Setter Property="BorderThickness" Value="0,0,1,0" />
@@ -56,13 +43,7 @@
                                 </TextBlock.Style>
                             </TextBlock>
                         </Grid>
-                            </Grid>
-                          </Grid>
-                        </Border>
-                        <Border Background="{DynamicResource FentGlass}" BorderBrush="{DynamicResource FentGlassLine}"
-                                BorderThickness="1" CornerRadius="14" Padding="8">
-                          <DetailsViewGameOverview x:Name="PART_ControlGameView" />
-                        </Border>
+                        <DetailsViewGameOverview x:Name="PART_ControlGameView" DockPanel.Dock="Left" />
                     </DockPanel>
                 </ControlTemplate>
             </Setter.Value>
