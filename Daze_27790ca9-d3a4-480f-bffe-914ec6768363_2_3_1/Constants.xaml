@@ -2,29 +2,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <!-- FentWare Glass v0.1: cool charcoal surfaces, soft silver text, restrained blue-grey edges. -->
+    <!-- FentWare Glass: aligned with FentWare-Site portal CSS near-black monochrome glass tokens. -->
     <!-- Colors -->
-    <Color x:Key="WhiteColor">#E9EEF3</Color>
-    <Color x:Key="BlackColor">#0A0F16</Color>
-    <Color x:Key="GreyColor">#293542</Color>
-    <Color x:Key="LightGreyColor">#9BAABA</Color>
-    <Color x:Key="DarkGreyColor">#121A24</Color>
+    <Color x:Key="WhiteColor">#FFFFFF</Color>
+    <Color x:Key="BlackColor">#020205</Color>
+    <Color x:Key="GreyColor">#FFFFFF</Color>
+    <Color x:Key="LightGreyColor">#FFFFFF</Color>
+    <Color x:Key="DarkGreyColor">#101014</Color>
 
     <!-- BRUSHES -->
     <!-- Main Colors Brushes -->
     <SolidColorBrush x:Key="FullAlpha" Color="{DynamicResource BlackColor}" Opacity="0" />
 
     <SolidColorBrush x:Key="White" Color="{DynamicResource WhiteColor}" Opacity="0.92"/>
-    <SolidColorBrush x:Key="LightGrey" Color="{DynamicResource WhiteColor}" Opacity="0.65" />
-    <SolidColorBrush x:Key="AlphaWhite" Color="{DynamicResource WhiteColor}" Opacity="0.13" />
-    <SolidColorBrush x:Key="AlphaBlack" Color="{DynamicResource BlackColor}" Opacity="0.84" />
-    <SolidColorBrush x:Key="AlphaGrey" Color="{DynamicResource GreyColor}" Opacity="0.42" />
+    <SolidColorBrush x:Key="LightGrey" Color="{DynamicResource WhiteColor}" Opacity="0.56" />
+    <SolidColorBrush x:Key="AlphaWhite" Color="{DynamicResource WhiteColor}" Opacity="0.105" />
+    <SolidColorBrush x:Key="AlphaBlack" Color="{DynamicResource BlackColor}" Opacity="0.88" />
+    <SolidColorBrush x:Key="AlphaGrey" Color="{DynamicResource WhiteColor}" Opacity="0.055" />
     <SolidColorBrush x:Key="DarkGrey" Color="{DynamicResource BlackColor}" Opacity="0.72" />
 
     <LinearGradientBrush x:Key="WindowBackground" StartPoint="0.5,0" EndPoint="0.5,1" >
         <GradientStop Color="{DynamicResource BlackColor}" Offset="0"/>
         <GradientStop Color="{DynamicResource BlackColor}" Offset="0.9"/>
     </LinearGradientBrush>
+
+    <!-- Site-derived, reusable glass tokens for view templates. -->
+    <SolidColorBrush x:Key="FentGlass" Color="#FFFFFF" Opacity="0.055" />
+    <SolidColorBrush x:Key="FentGlassStrong" Color="#FFFFFF" Opacity="0.105" />
+    <SolidColorBrush x:Key="FentGlassLine" Color="#FFFFFF" Opacity="0.16" />
+    <SolidColorBrush x:Key="FentTextMuted" Color="#FFFFFF" Opacity="0.56" />
+    <SolidColorBrush x:Key="FentTextFaint" Color="#FFFFFF" Opacity="0.28" />
 
     <!-- Rating Brushes -->
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
@@ -76,13 +83,13 @@
 
     <!-- COLORS / BRUSHES (for source code controls and such) -->
     <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource LightGreyColor}" />
-    <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource GreyColor}" />
-    <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource GreyColor}" />
+    <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource WhiteColor}" Opacity="0.16" />
+    <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource BlackColor}" Opacity="0.94" />
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource BlackColor}" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource BlackColor}" />
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource BlackColor}" />
-    <SolidColorBrush x:Key="NormalBorderBrush" Color="{DynamicResource LightGreyColor}" />
-    <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource GreyColor}" Opacity="0.6" />
+    <SolidColorBrush x:Key="NormalBorderBrush" Color="{DynamicResource WhiteColor}" Opacity="0.16" />
+    <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WhiteColor}" Opacity="0.16" />
 
     <SolidColorBrush x:Key="WarningBrush" Color="#ff6b6b" />
 
