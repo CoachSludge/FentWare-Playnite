@@ -202,8 +202,8 @@
                                             </Style.Triggers>
                                         </Style>
                                     </Border.Style>
-                                <Image Source="{ThemeFile 'Images/fentware/logo_tranparent_rounded_edge_250.jpg'}"
-                                       Height="40" RenderOptions.BitmapScalingMode="HighQuality"
+                                <Image Source="{ThemeFile 'Images/applogo.png'}"
+                                       Height="40" RenderOptions.BitmapScalingMode="Fant"
                                        Margin="10,0,5,0"/>
 
                             </Border>
@@ -211,7 +211,7 @@
                             <SearchBox x:Name="PART_TextMainSearch"
                                         Margin="15,6,0,6" DockPanel.Dock="Left"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Width="310"  />
+                                        Width="300"  />
 
                             <CheckBox x:Name="PART_ToggleNotifications" Style="{DynamicResource TopPanelNotificationsToggle}" DockPanel.Dock="Left" />
 
