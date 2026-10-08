@@ -2,23 +2,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <!-- FentWare Glass v0.1: cool charcoal surfaces, soft silver text, restrained blue-grey edges. -->
     <!-- Colors -->
-    <Color x:Key="WhiteColor">#F2F2F2</Color>
-    <Color x:Key="BlackColor">#000000</Color>
-    <Color x:Key="GreyColor">#3B3B3B</Color>
-    <Color x:Key="LightGreyColor">#8D8D8D</Color>
-    <Color x:Key="DarkGreyColor">#1F1F1F</Color>
+    <Color x:Key="WhiteColor">#E9EEF3</Color>
+    <Color x:Key="BlackColor">#0A0F16</Color>
+    <Color x:Key="GreyColor">#293542</Color>
+    <Color x:Key="LightGreyColor">#9BAABA</Color>
+    <Color x:Key="DarkGreyColor">#121A24</Color>
 
     <!-- BRUSHES -->
     <!-- Main Colors Brushes -->
     <SolidColorBrush x:Key="FullAlpha" Color="{DynamicResource BlackColor}" Opacity="0" />
 
-    <SolidColorBrush x:Key="White" Color="{DynamicResource WhiteColor}" Opacity="0.9"/>
-    <SolidColorBrush x:Key="LightGrey" Color="{DynamicResource WhiteColor}" Opacity="0.4" />
-    <SolidColorBrush x:Key="AlphaWhite" Color="{DynamicResource WhiteColor}" Opacity="0.2" />
-    <SolidColorBrush x:Key="AlphaBlack" Color="{DynamicResource BlackColor}" Opacity="0.9" />
-    <SolidColorBrush x:Key="AlphaGrey" Color="{DynamicResource GreyColor}" Opacity="0.5" />
-    <SolidColorBrush x:Key="DarkGrey" Color="{DynamicResource BlackColor}" Opacity="0.7" />
+    <SolidColorBrush x:Key="White" Color="{DynamicResource WhiteColor}" Opacity="0.92"/>
+    <SolidColorBrush x:Key="LightGrey" Color="{DynamicResource WhiteColor}" Opacity="0.65" />
+    <SolidColorBrush x:Key="AlphaWhite" Color="{DynamicResource WhiteColor}" Opacity="0.13" />
+    <SolidColorBrush x:Key="AlphaBlack" Color="{DynamicResource BlackColor}" Opacity="0.84" />
+    <SolidColorBrush x:Key="AlphaGrey" Color="{DynamicResource GreyColor}" Opacity="0.42" />
+    <SolidColorBrush x:Key="DarkGrey" Color="{DynamicResource BlackColor}" Opacity="0.72" />
 
     <LinearGradientBrush x:Key="WindowBackground" StartPoint="0.5,0" EndPoint="0.5,1" >
         <GradientStop Color="{DynamicResource BlackColor}" Offset="0"/>
@@ -36,11 +37,11 @@
 
     <!-- Rounded Borders -->
     
-    <CornerRadius x:Key="MainCornerRadius">12</CornerRadius>
-    <CornerRadius x:Key="SlidersCornerRadius">2</CornerRadius>
+    <CornerRadius x:Key="MainCornerRadius">14</CornerRadius>
+    <CornerRadius x:Key="SlidersCornerRadius">6</CornerRadius>
 
     <!-- Borders Thickness -->
-    <Thickness x:Key="ControlBorders">2</Thickness>
+    <Thickness x:Key="ControlBorders">1</Thickness>
     <Thickness x:Key="DefaultControlBorders">0</Thickness>
     <Thickness x:Key="AllWindowsBorders">0</Thickness>
     <Thickness x:Key="NoBorders">0</Thickness>
@@ -103,11 +104,11 @@
     <sys:Double x:Key="FontSizeLarge">15</sys:Double>
     <sys:Double x:Key="FontSizeLarger">20</sys:Double>
     <sys:Double x:Key="FontSizeLargest">29</sys:Double>
-    <FontFamily x:Key="FontFamily">Lato Light</FontFamily>
+    <FontFamily x:Key="FontFamily">Segoe UI</FontFamily>
     <FontFamily x:Key="MonospaceFontFamily">Consolas</FontFamily>
 
     <!-- PROPERTIES -->
-    <Thickness x:Key="PopupBorderThickness">2</Thickness>
+    <Thickness x:Key="PopupBorderThickness">1</Thickness>
     <sys:Double x:Key="EllipseBorderThickness">0</sys:Double>
     <Thickness x:Key="SidebarItemPadding">12</Thickness>
     <Thickness x:Key="ControlBorderThickness">0</Thickness>
