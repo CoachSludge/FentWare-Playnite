@@ -14,7 +14,15 @@ FentWare Glass brings the near-black surfaces, subtle white borders, restrained 
 
 ## Installation
 
-Get the released theme from **[fentware.cc](https://fentware.cc/)** when available. A public package has not been published yet.
+A downloadable `.pthm` package is planned for **[fentware.cc](https://fentware.cc/)**. It has not been published yet.
+
+To build it on a Windows machine with Playnite installed:
+
+```powershell
+.\Build-Theme.ps1
+```
+
+This uses Playnite's `Toolbox.exe pack` command and writes the installable `.pthm` into `dist/`. If Playnite is installed in a nonstandard location, supply `-ToolboxPath "C:\path\to\Playnite\Toolbox.exe"`. Upload the generated `.pthm` to the site's downloads directory. Users can double-click the `.pthm` to install the theme, then select FentWare Glass in Playnite's Desktop Appearance settings.
 
 ## Project status
 
